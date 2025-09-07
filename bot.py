@@ -341,7 +341,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def reply_to_user(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     if user_id not in ADMIN_IDS:
-        await update.message.reply_text("عذراً，你没有权限执行此操作。")
+        await update.message.reply_text("عذراً，ليس لديك الإذن لإجراء هذه العملية.")
         return
     
     if not context.args or len(context.args) < 2:
@@ -408,7 +408,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def view_chat_history(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     if user_id not in ADMIN_IDS:
-        await update.message.reply_text("عذراً，你没有权限执行此操作。")
+        await update.message.reply_text("عذراً，ليس لديك الإذن لإجراء هذه العملية.")
         return
     
     if not context.args:
