@@ -1,4 +1,5 @@
-python-telegram-bot[webhooks]==20.8
+python-telegram-bot
 python-dotenv==1.0.0
+
 
 
